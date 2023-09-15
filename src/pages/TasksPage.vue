@@ -29,7 +29,7 @@
 import { computed, onMounted, ref } from "vue";
 import Tasks from "../components/tasks/Tasks.vue";
 import NewTask from "../components/tasks/NewTask.vue";
-import { useTaskStore } from "../stores/task"
+import { useTaskStore } from "../stores/task.js"
 import { storeToRefs } from "pinia";
 
 const store = useTaskStore();
@@ -47,6 +47,6 @@ const showToggleCompletedBtn = computed(
 const completedTasksIsVisible = computed(
     () => uncompletedTasks.value.length === 0 || completedTasks.value.length > 0
 )
-const showCompletedTasks = ref(false);
+const showCompletedTasks = ref(false || completedTasksIsVisible.value);
 
 </script>

@@ -1,16 +1,28 @@
 <script setup>
 import Navbar from './components/Navbar.vue';
-import TasksPage from './pages/TasksPage.vue';
 import Footer from './components/Footer.vue';
-</script>
+
+</script >
 
 <template>
   <Navbar />
-  <TasksPage />
+  <router-view v-slot="{ Component }">
+  <transition name="fade">
+    <component :is="Component" />
+  </transition>
+</router-view>
   <Footer />
  
 </template>
 
 <style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 
 </style>
