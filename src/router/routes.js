@@ -3,6 +3,7 @@ import LoginPage from '../pages/LoginPage.vue';
 import RegisterPage from '../pages/RegisterPage.vue';
 import HomePage from '../pages/HomePage.vue';
 import SummaryPage from '../pages/SummaryPage.vue';
+import KanBanPage from '../pages/KanBanPage.vue';
 import NotFoundErrorPage from '../pages/errors/NotFoundErrorPage.vue';
 
 
@@ -44,6 +45,15 @@ const routes = [
         path:"/summary",
         component:SummaryPage,
         name:'summary',
+        /*
+        meta:{
+            auth:true
+        */
+    },
+    {
+        path:"/kanban",
+        component:KanBanPage,
+        name:'kanban',
         /*
         meta:{
             auth:true

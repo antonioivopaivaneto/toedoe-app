@@ -18,6 +18,9 @@
                     <li class="nav-item">
                         <router-link :to="{ name: 'summary' }" class="nav-link">Summary</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link :to="{ name: 'kanban' }" class="nav-link">KanBan</router-link>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <template v-if="!store.isLoggedIn">
